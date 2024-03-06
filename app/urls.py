@@ -6,7 +6,7 @@ from django.contrib.auth import views as auth_views
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path('stuapi/', views.StudentList.as_view())
+    path('stuapi/', views.StudentList.as_view()),
 ]
 
 
