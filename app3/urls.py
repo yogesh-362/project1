@@ -1,14 +1,11 @@
-from django.urls import path, include
+from django.urls import path
 from app3 import views
-from rest_framework.routers import DefaultRouter
-# from app3.auth import CustomAuthToken
-
-router = DefaultRouter()
-
-router.register('stuapi', views.StudentModelViewSet, basename='student'),
 
 urlpatterns = [
-    path('', include(router.urls)),
-    path('auth/', include('rest_framework.urls', namespace='rest_framework')),
-    # path('gettoken/', CustomAuthToken.as_view())
+    # Using Concrete API views(Separate)
+    # path('stuapi/', views.StudentList.as_view()),
+    # path('stuapi/', views.StudentCreate.as_view()),
+    # path('stuapi/<int:pk>/', views.StudentUpdate.as_view()),
+    path('stuapi/<int:pk>/', views.StudentRetrieve.as_view()),
+    # path('stuapi/<int:pk>/', views.StudentDestroy.as_view()),
 ]
