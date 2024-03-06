@@ -1,8 +1,7 @@
-from rest_framework.pagination import PageNumberPagination
+from rest_framework.pagination import LimitOffsetPagination
 
-class MyPageNumberPagination(PageNumberPagination):
-    page_size = 5
-    page_query_param = 'p' # Instaed pf page you can change the word page
-    page_size_query_param = 'records' # user can specify the number of records
-    max_page_size = 3 # max page size of records
-    last_page_strings = 'end' # for end page
+class MyLimitOffsetPagination(LimitOffsetPagination):
+    default_limit = 5
+    offset_query_param = 'myoffset' # instead of offset
+    limit_query_param = 'mylimit' # instead of limit
+    max_limit = 5 # max limit of limit
