@@ -131,3 +131,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #         'django_filters.rest_framework.DjangoFilterBackend'
 #     ]
 # }
+
+# Instead of search you can write your own word or anything
+# REST_FRAMEWORK = {
+#     'SEARCH_PARAM':'q'
+# }
