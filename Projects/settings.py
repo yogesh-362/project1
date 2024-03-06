@@ -125,7 +125,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES':{
-        'viewstu': '5/hour',
+        'viewstu': '5/day',
         'modifystu':'2/day'
     }
 }

@@ -32,5 +32,3 @@ class StudentDestroy(DestroyAPIView):
     serializer_class = StudentSerializer
     throttle_classes = [ScopedRateThrottle]
     throttle_scope = 'modifystu'
-
-
